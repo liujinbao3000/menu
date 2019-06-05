@@ -62,7 +62,7 @@ case $num1 in
    ;;
   8)
    clear
-   alias menu="bash $basepath/menu"
+   echo -e "\033[47;30m 退出Shell再登录menu别名生效\033[0m"
    echo alias menu=\"bash $basepath/menu\" >> ~/.bashrc
    echo alias menu=\"bash $basepath/menu\" >> ~/.zshrc
    echo alias menu=\"bash $basepath/menu\" >> /etc/profile
