@@ -77,9 +77,8 @@ cat << EOF
    `echo -e "\033[47;30m --reload|重新载入防火墙\033[0m"`
    `echo -e "\033[47;30m --timeout=5m|定义超时时间\033[0m"`
 EOF
-   read -p "输入选项:" option
-   read -p "输入IP:" ip
-   nmap $option $ip
+   read -p "输入firewall-cmd后的全部命令:" option
+   firewall-cmd $option
    read -s -n1 -p "按任意键继续 ... "
    menu
    ;;
