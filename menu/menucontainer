@@ -37,6 +37,8 @@ case $num1 in
    ;;
  3)
    clear
+   docker inspect -f='{{.Name}} {{.State.Status}}' $(docker ps -a -q)
+   read -p "复制或输入容器名称:" container
    docker logs $container
    menu
    ;;
