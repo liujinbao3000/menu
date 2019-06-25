@@ -9,7 +9,7 @@ function menu ()
 |***************菜单主页***************|
 ----------------------------------------
 `echo -e "\033[47;30m 可以在任意选择界面按"Ctrl+c"键退出;脚本文件路径：$basepath\033[0m"`
-`echo -e "\033[47;30m 1)Docker操作\033[0m"`
+`echo -e "\033[47;30m 1)Docker操作                                A)Iperf3\033[0m"`
 `echo -e "\033[47;30m 2)Docker容器操作\033[0m"`
 `echo -e "\033[47;30m 3)smokeping容器操作\033[0m"`
 `echo -e "\033[47;30m 4)nmap操作\033[0m"`
@@ -73,6 +73,11 @@ case $num1 in
  clear
  menu
   ;;
+ a)
+   clear
+   bash $basepath/menuiperf3
+   exit 0
+   ;;
  0)
   exit 0
 esac
